@@ -33,7 +33,10 @@ RUN pip install fairscale==0.4.13
 RUN pip install numpy==1.24.4
 RUN pip install immutabledict==4.1.0
 RUN pip install sentencepiece==0.1.99
+RUN pip install fastapi
 RUN pip install uvicorn
+RUN pip install numpy
+RUN pip install torch
 
 # Install from source.
 COPY . /workspace/gemma/
