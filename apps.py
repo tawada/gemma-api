@@ -10,13 +10,16 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 @dataclasses.dataclass
 class Config:
     api_key: str
+    ckpt_path: str
+    device: str
+    variant: str
 
 
 def load_config():
     config_path = "/tmp/config/config.json"
     with open(config_path) as f:
         data = json.load(f)
-    return Config(api_key=data["api_key"])
+    return Config(**data)
 
 config = load_config()
 logger = logging.getLogger("uvicorn.app." + __name__)
