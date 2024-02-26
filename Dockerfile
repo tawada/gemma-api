@@ -37,10 +37,9 @@ RUN pip install fastapi
 RUN pip install uvicorn
 
 # Install from source.
-COPY . /workspace/gemma/
-WORKDIR /workspace/gemma/
+WORKDIR /workspace/
 RUN git clone https://github.com/google/gemma_pytorch.git
 RUN pip install -e gemma_pytorch
+COPY . /workspace/gemma_pytorch/
 
 EXPOSE 8000
-
