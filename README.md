@@ -19,10 +19,10 @@ cp ./config/config.json.template ./config/config.json
 CNFG_PATH=./config
 CKPT_PATH=./ckpt
 
-docker run -t --rm \
+docker run -it --rm \
     --gpus all \
     -v ${CNFG_PATH}:/tmp/config \
     -v ${CKPT_PATH}:/tmp/ckpt \
     ${DOCKER_URI} \
-    python uvicorn main:app
+    python uvicorn main:app --host 0.0.0.0
 ```
