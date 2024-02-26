@@ -35,11 +35,12 @@ RUN pip install immutabledict==4.1.0
 RUN pip install sentencepiece==0.1.99
 RUN pip install fastapi
 RUN pip install uvicorn
-RUN pip install numpy
-RUN pip install torch
 
 # Install from source.
 COPY . /workspace/gemma/
 WORKDIR /workspace/gemma/
 RUN git clone https://github.com/google/gemma_pytorch.git
 RUN pip install -e gemma_pytorch
+
+EXPOSE 8000
+
