@@ -1,0 +1,6 @@
+{
+    "api_key": "",
+    "variant": "7b",
+    "ckpt_path": "/tmp/ckpt/gemma-7b-it.ckpt",
+    "device": "cuda"
+}
