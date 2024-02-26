@@ -41,5 +41,6 @@ WORKDIR /workspace/
 RUN git clone https://github.com/google/gemma_pytorch.git
 RUN pip install -e gemma_pytorch
 COPY . /workspace/gemma_pytorch/
+WORKDIR /workspace/gemma_pytorch/
 
 EXPOSE 8000

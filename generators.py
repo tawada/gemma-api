@@ -3,8 +3,8 @@ import random
 
 import numpy as np
 import torch
-from gemma_pytorch.gemma import config as gemma_config
-from gemma_pytorch.gemma import model as gemma_model
+from gemma import config as gemma_config
+from gemma import model as gemma_model
 
 import schemas
 from apps import config
@@ -40,9 +40,9 @@ def generate(messages: list[schemas.Message]):
     full_result = ""
 
     for _ in range(3):
-        result = gemma_model.generate(
+        result = model.generate(
             prompt,
-            device=gemma_config.device,
+            device=device,
             output_len=1000,
         )
         if MODEL_END in result:
