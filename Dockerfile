@@ -39,4 +39,4 @@ RUN pip install uvicorn
 COPY . /workspace/gemma/
 WORKDIR /workspace/gemma/
 RUN git clone https://github.com/google/gemma_pytorch.git
-RUN pip install -e .
+RUN pip install -e gemma_pytorch
