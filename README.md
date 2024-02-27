@@ -24,6 +24,7 @@ docker run -it --rm \
     --gpus all \
     -v ${CNFG_PATH}:/tmp/config \
     -v ${CKPT_PATH}:/tmp/ckpt \
+    -p 8000:8000 \
     ${DOCKER_URI} \
     uvicorn main:app --host 0.0.0.0
 ```
