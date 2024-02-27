@@ -3,6 +3,7 @@ Fast API wrapper for gemma_pytorch
 
 ## Build the docker image.
 ```
+TAG=`date "+%Y%m%d-%H%M%S"`
 DOCKER_URI=gemma-api:${TAG}
 
 docker build -f Dockerfile ./ -t ${DOCKER_URI}
