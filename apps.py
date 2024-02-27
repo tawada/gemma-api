@@ -1,17 +1,18 @@
-import dataclasses
 import json
 import logging
+from dataclasses import dataclass
 
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
 
-@dataclasses.dataclass
+@dataclass
 class Config:
     api_key: str
     ckpt_path: str
     device: str
+    output_len: int
     variant: str
 
 
