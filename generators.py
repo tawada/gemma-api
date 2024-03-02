@@ -46,13 +46,13 @@ def generate(messages: list[schemas.Message]):
             output_len=1000,
         )
         if MODEL_END in result:
-            result = result.split(MODEL_END)[0]
+            full_result += result.split(MODEL_END)[0]
             break
         else:
             full_result += result
             prompt = origin_prompt + full_result
             continue
-    return result
+    return full_result
 
 
 def format_prompt(messages: list[schemas.Message]):
