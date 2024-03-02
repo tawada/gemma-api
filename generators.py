@@ -43,7 +43,7 @@ def generate(messages: list[schemas.Message]):
         result = model.generate(
             prompt,
             device=device,
-            output_len=1000,
+            output_len=config.output_len,
         )
         if MODEL_END in result:
             full_result += result.split(MODEL_END)[0]
