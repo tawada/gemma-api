@@ -13,6 +13,7 @@ class Config:
     ckpt_path: str
     device: str
     output_len: int
+    tensor_dtype: str
     variant: str
 
 

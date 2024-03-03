@@ -3,5 +3,6 @@
     "variant": "7b",
     "ckpt_path": "/tmp/ckpt/gemma-7b-it.ckpt",
     "output_len": 100,
+    "tensor_dtype": "",
     "device": "cuda"
 }

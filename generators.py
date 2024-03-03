@@ -28,7 +28,8 @@ def generate(messages: list[schemas.Message]):
     device = config.device
     model_config = gemma_config.get_model_config(variant)
     model_config.dtype = "float32" if device == "cpu" else "float16"
-    model_config.quant = True
+    model_config.dtype = config.tensor_dtype or model_config.dtype
+    model_config.quant = False
     device = torch.device(device)
     with _set_default_tensor_type(model_config.get_dtype()):
         model = gemma_model.GemmaForCausalLM(model_config)
