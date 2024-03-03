@@ -1,4 +1,3 @@
-```markdown
 # Gemma API
 This project provides an API wrapper around the Gemma model for natural language generation. It's built using FastAPI, and is designed to be easily deployable as a Docker container.
 
@@ -94,4 +93,3 @@ Specify your license or that it's available as open-source.
 ## Acknowledgements
 - Gemma PyTorch for the underlying model.
 - FastAPI for the web framework.
-```
