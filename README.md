@@ -87,9 +87,6 @@ Generates text based on the provided sequence of messages.
 ## Security
 The Gemma API uses API keys for authorization. Be sure to include a valid API key in the `Authorization` header of your requests.
 
-## License
-Specify your license or that it's available as open-source.
-
 ## Acknowledgements
 - Gemma PyTorch for the underlying model.
 - FastAPI for the web framework.
