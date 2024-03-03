@@ -9,9 +9,14 @@ DOCKER_URI=gemma-api:${TAG}
 docker build -f Dockerfile ./ -t ${DOCKER_URI}
 ```
 
+## Download a model file
+```
+mkdir -p ckpt
+```
+Download ckpt files of google/gemma for pytorch.
+
 ## Setup config
 ```
-mkdir config
 cp ./config/config.json.template ./config/config.json
 ```
 
